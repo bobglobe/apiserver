@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @segment.name
+%p
+  %b Uuid:
+  = @segment.uuid
+%p
+  %b User:
+  = @segment.user_id
+%p
+  %b Description:
+  = @segment.description
+%p
+  %b Price:
+  = @segment.price
+
+= link_to 'Edit', edit_segment_path(@segment)
+\|
+= link_to 'Back', segments_path

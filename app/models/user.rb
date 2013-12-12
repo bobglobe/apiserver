@@ -1,7 +1,8 @@
 class User < ActiveRecord::Base
   rolify
   attr_accessible :role_ids, :as => :admin
-  attr_accessible :provider, :uid, :name, :email
+  attr_accessible :provider, :uid, :name, :email, :api_token, :expiry
+  has_many :segments
   validates_presence_of :name
 
   def self.create_with_omniauth(auth)

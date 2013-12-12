@@ -1,4 +1,6 @@
 Apiserver::Application.routes.draw do
+  resources :segments
+
   root :to => "home#index"
   resources :users, :only => [:index, :show, :edit, :update ]
   get '/auth/:provider/callback' => 'sessions#create'

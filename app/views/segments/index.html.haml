@@ -1,0 +1,27 @@
+%h1 Listing segments
+
+%table
+  %tr
+    %th Name
+    %th Uuid
+    %th User
+    %th Description
+    %th Price
+    %th
+    %th
+    %th
+
+  - @segments.each do |segment|
+    %tr
+      %td= segment.name
+      %td= segment.uuid
+      %td= segment.user_id
+      %td= segment.description
+      %td= segment.price
+      %td= link_to 'Show', segment
+      %td= link_to 'Edit', edit_segment_path(segment)
+      %td= link_to 'Destroy', segment, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Segment', new_segment_path

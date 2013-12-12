@@ -14,6 +14,7 @@ gem 'haml-rails'
 gem 'mysql2'
 gem 'omniauth'
 gem 'omniauth-google-oauth2'
+gem 'protected_attributes'
 gem 'rolify'
 gem 'simple_form'
 group :development do

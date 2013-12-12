@@ -1,0 +1,12 @@
+= simple_form_for(@segment) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :name
+    = f.input :uuid
+    = f.input :user_id
+    = f.input :description
+    = f.input :price
+
+  .form-actions
+    = f.button :submit
